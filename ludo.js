@@ -41,20 +41,25 @@ var resultDiv = document.getElementById("result");
 var winnerDiv = document.getElementById("winner-team");
 var playAgainBtn = document.getElementById("yes");
 var gameoverBtn = document.getElementById("no");
-
+var dicesound = document.getElementById("dicesound");
 
 var currentPlayerInfo = null;
 var currentNumber = 1;
 var indexPlayer = 0;
 
-startBtn.onclick = start;
+var audio = new Audio("./audio/dice.mp3");
+
+audio.onloadeddata = (evt) => startBtn.onclick = start;
 
 function start() {
   startBtn.classList.add("is-hidden");
   dice.classList.remove("is-hidden");
   teamTurn.classList.remove("is-hidden");
   setPlayersTurn();
-  dice.onclick = rollDice;
+  dice.onclick = () => {
+    audio.play();
+    rollDice();
+  };
 }
 
 function rollDice() {
@@ -96,9 +101,9 @@ function setWinPosition(anyPawn) {
   dice.removeEventListener("click", rollDice);
 
   resultDiv.classList.remove("is-hidden");
-  winnerDiv.textContent =  `${currentPlayerInfo.color} wins ! play again ? (y/n)`;
-  playAgainBtn.onclick =  () => window.location.reload()
-  gameoverBtn.onclick =  () => window.location.replace("gameover.html")
+  winnerDiv.textContent = `${currentPlayerInfo.color} wins ! play again ? (y/n)`;
+  playAgainBtn.onclick = () => window.location.reload();
+  gameoverBtn.onclick = () => window.location.replace("gameover.html");
 
   const pawnStyle = anyPawn.style;
   pawnStyle.gridColumnStart = 8;
@@ -106,7 +111,6 @@ function setWinPosition(anyPawn) {
   pawnStyle.gridRowStart = 8;
   pawnStyle.gridRowEnd = 9;
 }
-
 
 function checkResult() {
   currentPlayerInfo = teams[indexPlayer];
