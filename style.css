@@ -1,418 +1,503 @@
 ﻿* {
-    box-sizing: border-box;
-    margin: 0; 
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
-  body {
-      background-color: #031321;
-  }
+body {
+  background-image: url(./Images/istockphoto-1137996207-612x612.jpg);
+}
 
 .title {
-    display: flex;
-    justify-content: center;
-    color: red;
-   
+  display: flex;
+  justify-content: center;
+  color: red;
 }
-.teams-turn {
-    color: greenyellow;
+
+#teams-turn {
+  color: snow;
+  font-size: 1.5em;
 }
+
 h1 {
-    margin: 0px;
-    text-shadow: 5px 0 wheat;
-    color: greenyellow;
-    font-size: 3rem;
+  margin: 0px;
+  text-shadow: 3px 0 black;
+  color: white;
+  font-size: 5rem;
+  
 }
 
 .pawn {
-    z-index: 55
+  z-index: 55;
 }
 
 .check {
   display: flex;
   align-items: center;
- 
-    
+  flex-direction: column;
+  justify-content: center;
+  margin-right: 40px;
 }
 .dice {
-    height: 120px;
+  height: 120px;
+}
+
+.is-hidden {
+  display: none;
 }
 
 #board {
-    height: 91vh;
-    width: 130vh;
-    background-color: skyblue;
-    display: grid;
-    grid-template-columns: repeat(15, 50px);
-    grid-template-rows: repeat(15, 35px);
-     
+  background-color: lawngreen;
+  display: grid;
+  grid-template-columns: repeat(15, 50px);
+  grid-template-rows: repeat(15, 35px);
 }
 .ludo-board {
-    display: flex;
-    justify-content: center;
-   
+  display: flex;
+  justify-content: center;
 }
 .red {
-    background-color: red;
-    width: 301px;
-    height: 212px;
-    justify-self: start;  
+  background-color: red;
+  width: 301px;
+  height: 212px;
+  justify-self: start;
 }
 
 #red-pawn-1 {
-    grid-column: 2/3;
-    grid-row: 2/3;
-    background: white;
-    width: 50px;
-    height: 35px;
+  grid-column: 2/3;
+  grid-row: 2/3;
+  background: midnightblue;
+  width: 50px;
+  height: 35px;
 }
 #red-pawn-2 {
-    background-color: white;
-    grid-row: 5;
-    grid-column: 2;
-    width: 50px;
-    height: 35px;
+  background-color: white;
+  grid-row: 5;
+  grid-column: 2;
+  width: 50px;
+  height: 35px;
 }
 #red-pawn-3 {
-    background-color: white;
-    grid-row: 2;
-    grid-column: 5;
-    width: 50px;
-    height: 35px;
+  background-color: white;
+  grid-row: 2;
+  grid-column: 5;
+  width: 50px;
+  height: 35px;
 }
 #red-pawn-4 {
-    background-color: white;
-    grid-row: 5;
-    grid-column: 5;
-    width: 50px;
-    height: 35px;
+  background-color: white;
+  grid-row: 5;
+  grid-column: 5;
+  width: 50px;
+  height: 35px;
 }
 
 #red-team-way-1 {
-    background-color: red;
-    grid-row: 7/8;
-    grid-column: 2/3;
-    width: 50px;
-    height: 35px;
-    border: black solid 0.1px;
+  background-color: red;
+  grid-row: 7/8;
+  grid-column: 2/3;
+  width: 50px;
+  height: 35px;
+  border: black solid 0.1px;
 }
 #red-team-way-2 {
-    background-color: red;
-    grid-row: 8/9;
-    grid-column: 2/3;
-    width: 50px;
-    height: 35px;
-    border: black solid 0.1px;
+  background-color: red;
+  grid-row: 8/9;
+  grid-column: 2/3;
+  width: 50px;
+  height: 35px;
+  border: black solid 0.1px;
 }
 
 #red-team-way-3 {
-    background-color: red;
-    grid-row: 8/9;
-    grid-column: 3/4;
-    width: 50px;
-    height: 35px;
-    border: black solid 0.1px;
+  background-color: red;
+  grid-row: 8/9;
+  grid-column: 3/4;
+  width: 50px;
+  height: 35px;
+  border: black solid 0.1px;
 }
 #red-team-way-4 {
-    background-color: red;
-    grid-row: 8/9;
-    grid-column: 4/5;
-    width: 50px;
-    height: 35px;
-    border: black solid 0.1px;
+  background-color: red;
+  grid-row: 8/9;
+  grid-column: 4/5;
+  width: 50px;
+  height: 35px;
+  border: black solid 0.1px;
 }
 #red-team-way-5 {
-    background-color: red;
-    grid-row: 8;
-    grid-column: 5;
-    width: 50px;
-    height: 35px;
-    border: black solid 0.1px;
+  background-color: red;
+  grid-row: 8;
+  grid-column: 5;
+  width: 50px;
+  height: 35px;
+  border: black solid 0.1px;
 }
 #red-team-way-6 {
-    background-color: red;
-    grid-row: 8;
-    grid-column: 6;
-    width: 50px;
-    height: 35px;
-    border: black solid 0.1px;
+  background-color: red;
+  grid-row: 8;
+  grid-column: 6;
+  width: 50px;
+  height: 35px;
+  border: black solid 0.1px;
 }
 
 #yellow-pawn-1 {
-    grid-column: 14/15;
-    grid-row: 2/3;
-    background: black;
-    width: 50px;
-    height: 35px;
+  grid-column: 14/15;
+  grid-row: 2/3;
+  background: black;
+  width: 50px;
+  height: 35px;
 }
 #yellow-pawn-2 {
-    grid-column: 14;
-    grid-row: 5;
-    background: black;
-    width: 50px;
-    height: 35px;
+  grid-column: 14;
+  grid-row: 5;
+  background: black;
+  width: 50px;
+  height: 35px;
 }
 #yellow-pawn-3 {
-    grid-column: 11;
-    grid-row: 2;
-    background: black;
-    width: 50px;
-    height: 35px;
+  grid-column: 11;
+  grid-row: 2;
+  background: black;
+  width: 50px;
+  height: 35px;
 }
 #yellow-pawn-4 {
-    grid-column: 11;
-    grid-row: 5;
-    background: black;
-    width: 50px;
-    height: 35px;
+  grid-column: 11;
+  grid-row: 5;
+  background: black;
+  width: 50px;
+  height: 35px;
 }
 
 .yellow {
-    background-color: yellow;
-    width: 301px;
-    height: 212px;
-    grid-column-start: 10;
-
+  background-color: yellow;
+  width: 301px;
+  height: 212px;
+  grid-column-start: 10;
 }
 
 #yellow-team-way-1 {
-    background-color: yellow;
-    width: 50px;
-    height: 35px;
-    grid-row: 2;
-    grid-column: 9;
-    border: black solid 0.1px;
+  background-color: yellow;
+  width: 50px;
+  height: 35px;
+  grid-row: 2;
+  grid-column: 9;
+  border: black solid 0.1px;
 }
 
 #yellow-team-way-2 {
-    background-color: yellow;
-    width: 50px;
-    height: 35px;
-    grid-row: 2;
-    grid-column: 8;
-    border: black solid 0.1px;
+  background-color: yellow;
+  width: 50px;
+  height: 35px;
+  grid-row: 2;
+  grid-column: 8;
+  border: black solid 0.1px;
 }
 
 #yellow-team-way-3 {
-    background-color: yellow;
-    width: 50px;
-    height: 35px;
-    grid-row: 3;
-    grid-column: 8;
-    border: black solid 0.1px;
+  background-color: yellow;
+  width: 50px;
+  height: 35px;
+  grid-row: 3;
+  grid-column: 8;
+  border: black solid 0.1px;
 }
 #yellow-team-way-4 {
-    background-color: yellow;
-    width: 50px;
-    height: 35px;
-    grid-row: 4;
-    grid-column: 8;
-    border: black solid 0.1px;
+  background-color: yellow;
+  width: 50px;
+  height: 35px;
+  grid-row: 4;
+  grid-column: 8;
+  border: black solid 0.1px;
 }
 #yellow-team-way-5 {
-    background-color: yellow;
-    width: 50px;
-    height: 35px;
-    grid-row: 5;
-    grid-column: 8;
-    border: black solid 0.1px;
+  background-color: yellow;
+  width: 50px;
+  height: 35px;
+  grid-row: 5;
+  grid-column: 8;
+  border: black solid 0.1px;
 }
 #yellow-team-way-6 {
-    background-color: yellow;
-    width: 50px;
-    height: 35px;
-    grid-row: 6;
-    grid-column: 8;
-    border: black solid 0.1px;
+  background-color: yellow;
+  width: 50px;
+  height: 35px;
+  grid-row: 6;
+  grid-column: 8;
+  border: black solid 0.1px;
 }
- .blue {
-     background-color: blue;
-     width: 301px;
-     height: 212px;
-     grid-row: 10;
- }
- #blue-pawn-1 {
-    grid-column: 2;
-    grid-row: 14;
-    background: orchid;
-    width: 50px;
-    height: 35px;
+.blue {
+  background-color: blue;
+  width: 301px;
+  height: 212px;
+  grid-row: 10;
+}
+#blue-pawn-1 {
+  grid-column: 2;
+  grid-row: 14;
+  background: orchid;
+  width: 50px;
+  height: 35px;
 }
 #blue-pawn-2 {
-    grid-column: 5;
-    grid-row: 14;
-    background: orchid;
-    width: 50px;
-    height: 35px;
+  grid-column: 5;
+  grid-row: 14;
+  background: orchid;
+  width: 50px;
+  height: 35px;
 }
 #blue-pawn-3 {
-    grid-column: 2;
-    grid-row: 11;
-    background: orchid;
-    width: 50px;
-    height: 35px;
+  grid-column: 2;
+  grid-row: 11;
+  background: orchid;
+  width: 50px;
+  height: 35px;
 }
 #blue-pawn-4 {
-    grid-column: 5;
-    grid-row: 11;
-    background: orchid;
-    width: 50px;
-    height: 35px;
+  grid-column: 5;
+  grid-row: 11;
+  background: orchid;
+  width: 50px;
+  height: 35px;
 }
 
 #blue-team-way-1 {
-    background-color: blue;
-    width: 50px;
-    height: 35px;
-    border: black solid 0.1px;
-    grid-row: 14;
-    grid-column: 7;
+  background-color: blue;
+  width: 50px;
+  height: 35px;
+  border: black solid 0.1px;
+  grid-row: 14;
+  grid-column: 7;
 }
 
 #blue-team-way-2 {
-    background-color: blue;
-    width: 50px;
-    height: 35px;
-    border: black solid 0.1px;
-    grid-row: 14;
-    grid-column: 8;
+  background-color: blue;
+  width: 50px;
+  height: 35px;
+  border: black solid 0.1px;
+  grid-row: 14;
+  grid-column: 8;
 }
 #blue-team-way-3 {
-    background-color: blue;
-    width: 50px;
-    height: 35px;
-    border: black solid 0.1px;
-    grid-row: 13;
-    grid-column: 8;
+  background-color: blue;
+  width: 50px;
+  height: 35px;
+  border: black solid 0.1px;
+  grid-row: 13;
+  grid-column: 8;
 }
 
 #blue-team-way-4 {
-    background-color: blue;
-    width: 50px;
-    height: 35px;
-    border: black solid 0.1px;
-    grid-row: 12;
-    grid-column: 8;
+  background-color: blue;
+  width: 50px;
+  height: 35px;
+  border: black solid 0.1px;
+  grid-row: 12;
+  grid-column: 8;
 }
 #blue-team-way-5 {
-    background-color: blue;
-    width: 50px;
-    height: 35px;
-    border: black solid 0.1px;
-    grid-row: 11;
-    grid-column: 8;
+  background-color: blue;
+  width: 50px;
+  height: 35px;
+  border: black solid 0.1px;
+  grid-row: 11;
+  grid-column: 8;
 }
 #blue-team-way-6 {
-    background-color: blue;
-    width: 50px;
-    height: 35px;
-    border: black solid 0.1px;
-    grid-row: 10;
-    grid-column: 8;
+  background-color: blue;
+  width: 50px;
+  height: 35px;
+  border: black solid 0.1px;
+  grid-row: 10;
+  grid-column: 8;
 }
 
- .green {
-     background-color: green;
-     width: 301px;
-     height: 212px;
-     grid-row: 10;
-     grid-column-start: 10;
- }
- #green-pawn-1 {
-    grid-column: 14;
-    grid-row: 11;
-    background: gold;
-    width: 50px;
-    height: 35px;
+.green {
+  background-color: green;
+  width: 301px;
+  height: 212px;
+  grid-row: 10;
+  grid-column-start: 10;
+}
+#green-pawn-1 {
+  grid-column: 14;
+  grid-row: 11;
+  background: gold;
+  width: 50px;
+  height: 35px;
 }
 #green-pawn-2 {
-    grid-column: 11;
-    grid-row: 11;
-    background: gold;
-    width: 50px;
-    height: 35px;
+  grid-column: 11;
+  grid-row: 11;
+  background: gold;
+  width: 50px;
+  height: 35px;
 }
 #green-pawn-3 {
-    grid-column: 14;
-    grid-row: 14;
-    background: gold;
-    width: 50px;
-    height: 35px;
+  grid-column: 14;
+  grid-row: 14;
+  background: gold;
+  width: 50px;
+  height: 35px;
 }
 #green-pawn-4 {
-    grid-column: 11;
-    grid-row: 14;
-    background: gold;
-    width: 50px;
-    height: 35px;
+  grid-column: 11;
+  grid-row: 14;
+  background: gold;
+  width: 50px;
+  height: 35px;
 }
 #green-team-way-1 {
-    background-color: green;
-    width: 50px;
-    height: 35px;
-    border: black solid 0.1px;
-    grid-row: 9;
-    grid-column: 14;
+  background-color: green;
+  width: 50px;
+  height: 35px;
+  border: black solid 0.1px;
+  grid-row: 9;
+  grid-column: 14;
 }
 #green-team-way-2 {
-    background-color: green;
-    width: 50px;
-    height: 35px;
-    border: black solid 0.1px;
-    grid-row: 8;
-    grid-column: 14;
+  background-color: green;
+  width: 50px;
+  height: 35px;
+  border: black solid 0.1px;
+  grid-row: 8;
+  grid-column: 14;
 }
 #green-team-way-3 {
-    background-color: green;
-    width: 50px;
-    height: 35px;
-    border: black solid 0.1px;
-    grid-row: 8;
-    grid-column: 13;
+  background-color: green;
+  width: 50px;
+  height: 35px;
+  border: black solid 0.1px;
+  grid-row: 8;
+  grid-column: 13;
 }
 #green-team-way-4 {
-    background-color: green;
-    width: 50px;
-    height: 35px;
-    border: black solid 0.1px;
-    grid-row: 8;
-    grid-column: 12;
+  background-color: green;
+  width: 50px;
+  height: 35px;
+  border: black solid 0.1px;
+  grid-row: 8;
+  grid-column: 12;
 }
 #green-team-way-5 {
-    background-color: green;
-    width: 50px;
-    height: 35px;
-    border: black solid 0.1px;
-    grid-row: 8;
-    grid-column: 11;
+  background-color: green;
+  width: 50px;
+  height: 35px;
+  border: black solid 0.1px;
+  grid-row: 8;
+  grid-column: 11;
 }
 #green-team-way-6 {
-    background-color: green;
-    width: 50px;
-    height: 35px;
-    border: black solid 0.1px;
-    grid-row: 8;
-    grid-column: 10;
+  background-color: green;
+  width: 50px;
+  height: 35px;
+  border: black solid 0.1px;
+  grid-row: 8;
+  grid-column: 10;
 }
 
-
-
-
-
-
 #winner {
-    background-size: cover;
-    background-image: url(./Images/winner.jpg);
-    width: 150px;
-    height: 105px;
-    
-    grid-row: 7/9;
-    grid-column: 7/9;
+  background-size: cover;
+  background-image: url(./Images/winner.jpg);
+  width: 150px;
+  height: 105px;
+
+  grid-row: 7/9;
+  grid-column: 7/9;
 }
 
 #player {
-     color:red;
+  color: red;
 }
 #body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #031321;
+  font-family: consolas;
+  justify-content: space-around;
+}
+#a {
+  position: relative;
+  display: flex;
+  padding: 15px 30px;
+  color: greenyellow;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  text-decoration: none;
+  font-size: 24px;
+  overflow: hidden;
+  transition: 0.2s;
+  text-align: center;
+}
+#a:hover {
+  color: #255784;
+  background: greenyellow;
+  box-shadow: 0 0 10px greenyellow, 0 0 40px greenyellow, 0 0 80px greenyellow;
+}
+#h2 {
+  position: relative;
+  margin: 0;
+  font-size: 3em;
+  font-weight: 900;
+  color: #fff;
+  z-index: 1;
+  overflow: hidden;
+}
+#h2:before {
+  content: "";
+  position: absolute;
+  right: 100%;
+  width: 120%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent 0%, #031321 5%, #031321 100%);
+  animation: animate 7.5s linear forwards;
+}
+@keyframes animate {
+  0% {
+    right: 100%;
+  }
+  100% {
+    right: -300%;
+  }
+}
+#h2 span {
+  color: greenyellow;
+}
+#h1 {
+    position: relative;
+    margin: 0;
+    font-size: 3em;
+    font-weight: 900;
+    color: #fff;
+    z-index: 1;
+    overflow: hidden;
+}
+#h1:before {
+    content: "";
+    position: absolute;
+    right: 100%;
+    width: 120%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent 0%, #031321 5%, #031321 100%);
+    animation: animate 7.5s linear forwards;
+  }
+  @keyframes animate {
+    0% {
+      right: 100%;
+    }
+    100% {
+      right: -300%;
+    }
+  }
+  #h1 span {
+    color: greenyellow;
+  }
+  #gameover-body {
     margin: 0;
     padding: 0;
     display: flex;
@@ -421,58 +506,54 @@ h1 {
     min-height: 100vh;
     background: #031321;
     font-family: consolas;
-   justify-content: space-around;
-}
-#a {
-    position: relative;
-    display: flex;
-    padding: 15px 30px;
-    color: greenyellow;
-    text-transform: uppercase;
-    letter-spacing: 4px;
-    text-decoration: none;
-    font-size: 24px;
-    overflow: hidden;
+    justify-content: space-around;
+  }
+  #start {
+   font-size: 1.5em;
+    color: red;
     transition: 0.2s;
-    text-align: center;
-}
-#a:hover {
-    color: #255784;
-    background: greenyellow;
-    box-shadow: 0 0 10px greenyellow,  0 0 40px greenyellow,  0 0 80px greenyellow;
+    color: black;
+   border-radius: 10px;
  
-}
-#h2 {
-    position: relative;
-    margin: 0;
-    font-size: 3em;
-    font-weight: 900;
-    color: #fff;
-    z-index: 1;
-    overflow: hidden;
-    
+  }
+  #start:hover {
+    color: #255784;
+    background: rgb(92, 92, 253);
+    box-shadow: 0 0 10px rgb(95, 95, 253), 0 0 40px rgb(97, 97, 255), 0 0 80px rgb(85, 85, 255);
+  }
+  
 
-}
-#h2:before {
-    content: '';
-    position: absolute;
-    right: 100%;
-    width: 120%;
-    height: 100%;
-    background: linear-gradient(90deg,transparent 0%, #031321 5%, #031321 100%);
-    animation: animate 7.5s linear forwards;
-}
-@keyframes animate {
-    
-    0% {
-        right: 100%; 
-    }
-    100%
-    {
-      right: -300%;
-    }
-}
-#h2 span {
-    color: greenyellow;
+  #yes {
+    font-size: 1em;
+     color: black;
+     transition: 0.2s;
+     color: black;
+    border-radius: 5px;
+  
+   }
+   #yes:hover {
+     color: #255784;
+     background: lawngreen;
+     box-shadow: 0 0 10px lawngreen, 0 0 40px lawngreen, 0 0 80px lawngreen;
+   }
 
-}
+   #no {
+    font-size: 1em;
+     color: black;
+     transition: 0.2s;
+     color: black;
+    border-radius: 5px;
+  
+   }
+   #no:hover {
+     color: #255784;
+     background: red;
+     box-shadow: 0 0 10px red, 0 0 40px red, 0 0 80px red;
+   }
+   
+   #result {
+    margin: 0px;
+    text-shadow: 2px 0 blue;
+    color: whitesmoke;
+    font-size: 2rem;
+   }
