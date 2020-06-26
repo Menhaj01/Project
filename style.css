@@ -16,6 +16,7 @@ body {
 #teams-turn {
   color: snow;
   font-size: 1.5em;
+  text-shadow: 2px 0 black;
 }
 
 h1 {
@@ -553,7 +554,8 @@ h1 {
    
    #result {
     margin: 0px;
-    text-shadow: 2px 0 blue;
+    text-shadow: 2px 0 black;
     color: whitesmoke;
     font-size: 2rem;
+    
    }
